@@ -3132,7 +3132,7 @@ let selectedCalDate = null;
 let todoFilter = 'all';
 let editingTodoId = null;
 let reschedulingTodoId = null;
-let examDate = '2027-01-15';
+let examDate = '2027-05-01';
 let mockTests = [];
 let habits = [
   {id:'h1', name:'Morning Study Session'},
@@ -5241,7 +5241,8 @@ async function load(){
       visualStyle = parsed.visualStyle || 'scholar';
       activityDates = parsed.activityDates || {};
       sessionsCompleted = parsed.sessionsCompleted || 0;
-      examDate = parsed.examDate || '2027-01-15';
+      examDate = parsed.examDate || '2027-05-01';
+      if(examDate==='2027-01-15') examDate = '2027-05-01';
       mockTests = parsed.mockTests || [];
       habits = parsed.habits || habits;
       habitLog = parsed.habitLog || {};
